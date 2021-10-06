@@ -173,11 +173,11 @@ wp core install --allow-root --path=$var_dir --url=$base_url --title="$wp_site_t
 
 # Install Arabic language support
 echo "Installing Arabic language support.."
-wp language core install ar --allow-root
+wp language core install ar --allow-root --path=$var_dir --url=$base_url
 
 # Install usful plugins for development
 echo "Installing usful plugins.."
-wp plugin install query-monitor --activate --allow-root
+wp plugin install query-monitor all-in-one-wp-migration --activate --allow-root --path=$var_dir --url=$base_url
 
 chmod -R 777 $var_dir
 
